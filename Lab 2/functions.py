@@ -11,6 +11,6 @@ def say_score(score):
 def get_average_value(nums):
     average_value = 0
     for indexNum in range(len(nums)):
-        average_value += nums[i]
+        average_value += nums[indexNum]
     average_value /= len(nums)
     return average_value
