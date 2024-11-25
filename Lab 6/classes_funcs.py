@@ -5,14 +5,14 @@ def create_worker(name, age):
     if age < 18:
         raise Exception("Age is too small")
     new_worker = classes.Worker(name, age)
-    return classes.Company.workers.append(new_worker)
+    return new_worker
 
 def add_worker(worker:classes.Worker):
     if worker.age < 18:
         raise Exception("Age is too small")
     if len(worker.name) == 0 or worker.name is None:
         raise Exception("Name can not be empty")
-    return classes.Company.workers.append(worker)
+    return True
 
 def get_ages_by_names():
     dict = {}
