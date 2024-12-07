@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <title>Names</title>
+</head>
+<body>
+    {% block content%}
+        {% if names|length == 0 %}
+        <h2>Список пуст</h2>
+        {% else %}
+        <h3>Длина списка - {{ names|length }}</h3>
+        <table>
+            <tbody>
+            {% for name in names %}
+            <tr><th>{{ name|upper }}</th></tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    {% endblock content %}
+</body>
+</html>
